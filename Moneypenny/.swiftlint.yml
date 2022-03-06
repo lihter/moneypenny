@@ -1,0 +1,40 @@
+cyclomatic_complexity: 12
+file_length: 550
+function_parameter_count: 8
+line_length:
+  warning: 120
+  ignores_comments: true
+type_body_length: 300
+function_body_length:
+  warning: 60
+identifier_name:
+  min_length:
+    error: 1
+    warning: 1
+
+opt_in_rules:
+  - file_header
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Pods
+
+disabled_rules:
+  - force_cast
+  - todo
+  - opening_brace
+  - closure_parameter_position
+
+file_header: 
+  forbidden_pattern: | 
+                     .*?
+
+custom_rules:
+    # Define custom rule for force cast. Ignore line where we are casting collectionView or cell.
+    force_cast:
+      name: "Force Cast Violation: Force casts should be avoided."
+      regex: 'as!\s(?!.*(CollectionView|Cell)).*?'
+      severity: error
+    todo:
+      name: "Todo Violation: TODOs without ticket number should be resolved."
+      regex: 'TODO:\s(?!.*(MOBILE)).*?'
+      severity: error

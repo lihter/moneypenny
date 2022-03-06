@@ -29,11 +29,11 @@ extension AppModule {
 
     private func registerFirstScreen(in container: Resolver) {
         container
-            .register { SomePresenter(router: container.resolve()) }
+            .register { HomePresenter(router: container.resolve()) }
             .scope(.unique)
 
         container
-            .register { SomeViewController(presenter: container.resolve()) }
+            .register { HomeViewController(presenter: container.resolve()) }
             .scope(.unique)
     }
 

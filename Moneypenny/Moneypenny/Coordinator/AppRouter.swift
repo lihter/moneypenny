@@ -14,7 +14,7 @@ final class AppRouter {
     }
 
     func start(in window: UIWindow?) {
-        let viewController: SomeViewController = container.resolve()
+        let viewController: HomeViewController = container.resolve()
 
         navigationController.setViewControllers([viewController], animated: true)
 

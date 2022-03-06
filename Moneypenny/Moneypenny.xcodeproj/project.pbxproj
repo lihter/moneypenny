@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5674DC5727D4B833006D1906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC5627D4B833006D1906 /* AppDelegate.swift */; };
+		5674DC5927D4B833006D1906 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC5827D4B833006D1906 /* SceneDelegate.swift */; };
+		5674DC6027D4B835006D1906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5674DC5F27D4B835006D1906 /* Assets.xcassets */; };
+		5674DC6327D4B835006D1906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5674DC6127D4B835006D1906 /* LaunchScreen.storyboard */; };
+		5674DC7227D4B94D006D1906 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC7127D4B94D006D1906 /* AppModule.swift */; };
+		5674DC7527D4B9BC006D1906 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC7427D4B9BC006D1906 /* AppRouter.swift */; };
+		5674DC7827D4B9EF006D1906 /* SomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC7727D4B9EF006D1906 /* SomeViewController.swift */; };
+		5674DC7A27D4BA12006D1906 /* SomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC7927D4BA12006D1906 /* SomePresenter.swift */; };
+		5674DC8027D4BBBC006D1906 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 5674DC7F27D4BBBC006D1906 /* Resolver */; };
+		5674DC8227D4BBBC006D1906 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 5674DC8127D4BBBC006D1906 /* Resolver-Static */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5674DC5327D4B833006D1906 /* Moneypenny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneypenny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5674DC5627D4B833006D1906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5674DC5827D4B833006D1906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5674DC5F27D4B835006D1906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5674DC6227D4B835006D1906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5674DC6427D4B835006D1906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5674DC7127D4B94D006D1906 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		5674DC7427D4B9BC006D1906 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		5674DC7727D4B9EF006D1906 /* SomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewController.swift; sourceTree = "<group>"; };
+		5674DC7927D4BA12006D1906 /* SomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomePresenter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5674DC5027D4B833006D1906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5674DC8227D4BBBC006D1906 /* Resolver-Static in Frameworks */,
+				5674DC8027D4BBBC006D1906 /* Resolver in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5674DC4A27D4B833006D1906 = {
+			isa = PBXGroup;
+			children = (
+				5674DC5527D4B833006D1906 /* Moneypenny */,
+				5674DC5427D4B833006D1906 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5674DC5427D4B833006D1906 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5674DC5327D4B833006D1906 /* Moneypenny.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5674DC5527D4B833006D1906 /* Moneypenny */ = {
+			isa = PBXGroup;
+			children = (
+				5674DC6427D4B835006D1906 /* Info.plist */,
+				5674DC5627D4B833006D1906 /* AppDelegate.swift */,
+				5674DC7127D4B94D006D1906 /* AppModule.swift */,
+				5674DC5827D4B833006D1906 /* SceneDelegate.swift */,
+				5674DC5F27D4B835006D1906 /* Assets.xcassets */,
+				5674DC7327D4B9B1006D1906 /* Coordinator */,
+				5674DC7627D4B9DC006D1906 /* Features */,
+				5674DC6127D4B835006D1906 /* LaunchScreen.storyboard */,
+			);
+			path = Moneypenny;
+			sourceTree = "<group>";
+		};
+		5674DC7327D4B9B1006D1906 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5674DC7427D4B9BC006D1906 /* AppRouter.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5674DC7627D4B9DC006D1906 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5674DC7927D4BA12006D1906 /* SomePresenter.swift */,
+				5674DC7727D4B9EF006D1906 /* SomeViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5674DC5227D4B833006D1906 /* Moneypenny */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5674DC6727D4B835006D1906 /* Build configuration list for PBXNativeTarget "Moneypenny" */;
+			buildPhases = (
+				5674DC4F27D4B833006D1906 /* Sources */,
+				56045C1A27D4BE07003BBD24 /* ShellScript */,
+				5674DC5027D4B833006D1906 /* Frameworks */,
+				5674DC5127D4B833006D1906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Moneypenny;
+			packageProductDependencies = (
+				5674DC7F27D4BBBC006D1906 /* Resolver */,
+				5674DC8127D4BBBC006D1906 /* Resolver-Static */,
+			);
+			productName = Moneypenny;
+			productReference = 5674DC5327D4B833006D1906 /* Moneypenny.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5674DC4B27D4B833006D1906 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					5674DC5227D4B833006D1906 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5674DC4E27D4B833006D1906 /* Build configuration list for PBXProject "Moneypenny" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5674DC4A27D4B833006D1906;
+			packageReferences = (
+				5674DC7E27D4BBBC006D1906 /* XCRemoteSwiftPackageReference "Resolver" */,
+			);
+			productRefGroup = 5674DC5427D4B833006D1906 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5674DC5227D4B833006D1906 /* Moneypenny */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5674DC5127D4B833006D1906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5674DC6327D4B835006D1906 /* LaunchScreen.storyboard in Resources */,
+				5674DC6027D4B835006D1906 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56045C1A27D4BE07003BBD24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5674DC4F27D4B833006D1906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5674DC7527D4B9BC006D1906 /* AppRouter.swift in Sources */,
+				5674DC7827D4B9EF006D1906 /* SomeViewController.swift in Sources */,
+				5674DC5727D4B833006D1906 /* AppDelegate.swift in Sources */,
+				5674DC5927D4B833006D1906 /* SceneDelegate.swift in Sources */,
+				5674DC7A27D4BA12006D1906 /* SomePresenter.swift in Sources */,
+				5674DC7227D4B94D006D1906 /* AppModule.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5674DC6127D4B835006D1906 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5674DC6227D4B835006D1906 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5674DC6527D4B835006D1906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5674DC6627D4B835006D1906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5674DC6827D4B835006D1906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y29SMM866B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Moneypenny/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.moneypenny.dao.Moneypenny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5674DC6927D4B835006D1906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y29SMM866B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Moneypenny/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.moneypenny.dao.Moneypenny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5674DC4E27D4B833006D1906 /* Build configuration list for PBXProject "Moneypenny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5674DC6527D4B835006D1906 /* Debug */,
+				5674DC6627D4B835006D1906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5674DC6727D4B835006D1906 /* Build configuration list for PBXNativeTarget "Moneypenny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5674DC6827D4B835006D1906 /* Debug */,
+				5674DC6927D4B835006D1906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5674DC7E27D4BBBC006D1906 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5674DC7F27D4BBBC006D1906 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5674DC7E27D4BBBC006D1906 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		5674DC8127D4BBBC006D1906 /* Resolver-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5674DC7E27D4BBBC006D1906 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = "Resolver-Static";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5674DC4B27D4B833006D1906 /* Project object */;
+}

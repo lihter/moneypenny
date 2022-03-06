@@ -1,19 +1,18 @@
 import Combine
 import UIKit
 
-class HomeViewController: UIViewController {
+class ProjectListViewController: UIViewController {
 
-    typealias DataSource = UICollectionViewDiffableDataSource<HomeSection, ProjectViewModel>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<HomeSection, ProjectViewModel>
+    typealias DataSource = UICollectionViewDiffableDataSource<ProjectListSection, ProjectViewModel>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<ProjectListSection, ProjectViewModel>
 
-    var testLabel: Heading6BoldLabel!
     var collectionView: UICollectionView!
-    var presenter: HomePresenter!
+    var presenter: ProjectListPresenter!
     var dataSource: DataSource!
 
     private var disposables = Set<AnyCancellable>()
 
-    init(presenter: HomePresenter) {
+    init(presenter: ProjectListPresenter) {
         super.init(nibName: nil, bundle: nil)
 
         self.presenter = presenter

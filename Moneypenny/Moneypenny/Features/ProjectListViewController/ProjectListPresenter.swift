@@ -1,7 +1,7 @@
 import Combine
 import Foundation
 
-class HomePresenter {
+class ProjectListPresenter {
 
     private let router: AppRouter!
 

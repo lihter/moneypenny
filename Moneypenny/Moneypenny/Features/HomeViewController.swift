@@ -4,14 +4,20 @@ import Resolver
 class HomeViewController: UIViewController {
 
     var projectListViewController: ProjectListViewController!
+    var bigProjectListViewController: BigProjectListViewController!
     var presenter: HomePresenter!
     var container: Resolver!
 
-    init(presenter: HomePresenter, projectListViewController: ProjectListViewController) {
+    init(
+        presenter: HomePresenter,
+        projectListViewController: ProjectListViewController,
+        bigProjectListViewController: BigProjectListViewController
+    ) {
         super.init(nibName: nil, bundle: nil)
 
         self.presenter = presenter
         self.projectListViewController = projectListViewController
+        self.bigProjectListViewController = bigProjectListViewController
     }
 
     required init?(coder: NSCoder) {

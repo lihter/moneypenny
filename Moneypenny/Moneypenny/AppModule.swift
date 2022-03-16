@@ -34,6 +34,10 @@ extension AppModule {
             .scope(.unique)
 
         container
+            .register { BigProjectListPresenter(router: container.resolve()) }
+            .scope(.unique)
+
+        container
             .register { HomePresenter(router: container.resolve()) }
             .scope(.unique)
     }
@@ -44,8 +48,15 @@ extension AppModule {
             .scope(.unique)
 
         container
+            .register { BigProjectListViewController(presenter: container.resolve()) }
+            .scope(.unique)
+
+        container
             .register {
-                HomeViewController(presenter: container.resolve(), projectListViewController: container.resolve())
+                HomeViewController(
+                    presenter: container.resolve(),
+                    projectListViewController: container.resolve(),
+                    bigProjectListViewController: container.resolve())
             }
             .scope(.unique)
     }

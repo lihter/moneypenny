@@ -52,6 +52,12 @@
 		564C131227D507BF007816D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131127D507BF007816D3 /* HomeViewController.swift */; };
 		564C131427D508B1007816D3 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131327D508B1007816D3 /* HomePresenter.swift */; };
 		564C131627D508E9007816D3 /* HomeViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131527D508E9007816D3 /* HomeViewController+Design.swift */; };
+		564C131927D51513007816D3 /* BigProjectListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131827D51513007816D3 /* BigProjectListPresenter.swift */; };
+		564C131B27D5152C007816D3 /* BigProjectListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131A27D5152C007816D3 /* BigProjectListSection.swift */; };
+		564C131D27D51542007816D3 /* BigProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131C27D51542007816D3 /* BigProjectListViewController.swift */; };
+		564C131F27D5155D007816D3 /* BigProjectListViewController+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C131E27D5155D007816D3 /* BigProjectListViewController+Design.swift */; };
+		564C132227D51667007816D3 /* BigProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C132127D51667007816D3 /* BigProjectCollectionViewCell.swift */; };
+		564C132427D5169F007816D3 /* BigProjectCollectionViewCell+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C132327D5169F007816D3 /* BigProjectCollectionViewCell+Design.swift */; };
 		5674DC5727D4B833006D1906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC5627D4B833006D1906 /* AppDelegate.swift */; };
 		5674DC5927D4B833006D1906 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC5827D4B833006D1906 /* SceneDelegate.swift */; };
 		5674DC6027D4B835006D1906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5674DC5F27D4B835006D1906 /* Assets.xcassets */; };
@@ -62,6 +68,9 @@
 		5674DC7A27D4BA12006D1906 /* ProjectListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5674DC7927D4BA12006D1906 /* ProjectListPresenter.swift */; };
 		5674DC8027D4BBBC006D1906 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 5674DC7F27D4BBBC006D1906 /* Resolver */; };
 		5674DC8227D4BBBC006D1906 /* Resolver-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 5674DC8127D4BBBC006D1906 /* Resolver-Static */; };
+		56A4412E27E1F58C004D9413 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A4412D27E1F58C004D9413 /* UIColor+Extension.swift */; };
+		56A4413127E1FA1B004D9413 /* SmallParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A4413027E1FA1B004D9413 /* SmallParameterView.swift */; };
+		56A4413327E1FB24004D9413 /* SmallParameterView+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A4413227E1FB24004D9413 /* SmallParameterView+Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +117,12 @@
 		564C131127D507BF007816D3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		564C131327D508B1007816D3 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		564C131527D508E9007816D3 /* HomeViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+Design.swift"; sourceTree = "<group>"; };
+		564C131827D51513007816D3 /* BigProjectListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigProjectListPresenter.swift; sourceTree = "<group>"; };
+		564C131A27D5152C007816D3 /* BigProjectListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigProjectListSection.swift; sourceTree = "<group>"; };
+		564C131C27D51542007816D3 /* BigProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigProjectListViewController.swift; sourceTree = "<group>"; };
+		564C131E27D5155D007816D3 /* BigProjectListViewController+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigProjectListViewController+Design.swift"; sourceTree = "<group>"; };
+		564C132127D51667007816D3 /* BigProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigProjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		564C132327D5169F007816D3 /* BigProjectCollectionViewCell+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigProjectCollectionViewCell+Design.swift"; sourceTree = "<group>"; };
 		5674DC5327D4B833006D1906 /* Moneypenny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneypenny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5674DC5627D4B833006D1906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5674DC5827D4B833006D1906 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +133,9 @@
 		5674DC7427D4B9BC006D1906 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		5674DC7727D4B9EF006D1906 /* ProjectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 		5674DC7927D4BA12006D1906 /* ProjectListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListPresenter.swift; sourceTree = "<group>"; };
+		56A4412D27E1F58C004D9413 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		56A4413027E1FA1B004D9413 /* SmallParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallParameterView.swift; sourceTree = "<group>"; };
+		56A4413227E1FB24004D9413 /* SmallParameterView+Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallParameterView+Design.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +188,7 @@
 				56045C7827D4F9C1003BBD24 /* UIEdgeInsets.swift */,
 				56045C2327D4C555003BBD24 /* UIFont+Extension.swift */,
 				56045C7127D4EEE9003BBD24 /* UIImage+Extension.swift */,
+				56A4412D27E1F58C004D9413 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				56045C6D27D4ED1C003BBD24 /* WatchlistButton.swift */,
+				564C132027D51656007816D3 /* BigProjectCell */,
+				56A4412F27E1FA08004D9413 /* SmallParaameterView */,
 				56045C7327D4F042003BBD24 /* SmallProjectCell */,
 			);
 			path = Components;
@@ -252,6 +273,26 @@
 				56045C7627D4F102003BBD24 /* ProjectViewModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		564C131727D514E0007816D3 /* BigProjectListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				564C131827D51513007816D3 /* BigProjectListPresenter.swift */,
+				564C131A27D5152C007816D3 /* BigProjectListSection.swift */,
+				564C131C27D51542007816D3 /* BigProjectListViewController.swift */,
+				564C131E27D5155D007816D3 /* BigProjectListViewController+Design.swift */,
+			);
+			path = BigProjectListViewController;
+			sourceTree = "<group>";
+		};
+		564C132027D51656007816D3 /* BigProjectCell */ = {
+			isa = PBXGroup;
+			children = (
+				564C132127D51667007816D3 /* BigProjectCollectionViewCell.swift */,
+				564C132327D5169F007816D3 /* BigProjectCollectionViewCell+Design.swift */,
+			);
+			path = BigProjectCell;
 			sourceTree = "<group>";
 		};
 		5674DC4A27D4B833006D1906 = {
@@ -297,13 +338,23 @@
 		5674DC7627D4B9DC006D1906 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				56045C7A27D4FA78003BBD24 /* Models */,
 				564C131327D508B1007816D3 /* HomePresenter.swift */,
 				564C131127D507BF007816D3 /* HomeViewController.swift */,
 				564C131527D508E9007816D3 /* HomeViewController+Design.swift */,
-				56045C7A27D4FA78003BBD24 /* Models */,
+				564C131727D514E0007816D3 /* BigProjectListViewController */,
 				56045C6427D4CBC1003BBD24 /* ProjectListViewController */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		56A4412F27E1FA08004D9413 /* SmallParaameterView */ = {
+			isa = PBXGroup;
+			children = (
+				56A4413027E1FA1B004D9413 /* SmallParameterView.swift */,
+				56A4413227E1FB24004D9413 /* SmallParameterView+Design.swift */,
+			);
+			path = SmallParaameterView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,9 +463,13 @@
 				56045C5627D4C723003BBD24 /* Heading1Label.swift in Sources */,
 				56045C6727D4CCFD003BBD24 /* SmallProjectCollectionViewCell.swift in Sources */,
 				5674DC7527D4B9BC006D1906 /* AppRouter.swift in Sources */,
+				564C131B27D5152C007816D3 /* BigProjectListSection.swift in Sources */,
 				56045C5827D4C723003BBD24 /* Heading6Label.swift in Sources */,
+				56A4413327E1FB24004D9413 /* SmallParameterView+Design.swift in Sources */,
 				5674DC7827D4B9EF006D1906 /* ProjectListViewController.swift in Sources */,
+				56A4412E27E1F58C004D9413 /* UIColor+Extension.swift in Sources */,
 				5674DC5727D4B833006D1906 /* AppDelegate.swift in Sources */,
+				564C132427D5169F007816D3 /* BigProjectCollectionViewCell+Design.swift in Sources */,
 				56045C6E27D4ED1C003BBD24 /* WatchlistButton.swift in Sources */,
 				56045C5227D4C723003BBD24 /* Heading7Label.swift in Sources */,
 				56045C6327D4CB71003BBD24 /* Heading6BoldLabel.swift in Sources */,
@@ -428,15 +483,20 @@
 				56045C7227D4EEE9003BBD24 /* UIImage+Extension.swift in Sources */,
 				56045C5E27D4C74B003BBD24 /* ProjectListViewController+Design.swift in Sources */,
 				5674DC7A27D4BA12006D1906 /* ProjectListPresenter.swift in Sources */,
+				564C131F27D5155D007816D3 /* BigProjectListViewController+Design.swift in Sources */,
 				564C131227D507BF007816D3 /* HomeViewController.swift in Sources */,
 				56045C5327D4C723003BBD24 /* Heading11Label.swift in Sources */,
 				56045C5127D4C723003BBD24 /* Heading2Label.swift in Sources */,
 				56045C4F27D4C723003BBD24 /* LinkLabel.swift in Sources */,
+				564C131D27D51542007816D3 /* BigProjectListViewController.swift in Sources */,
 				56045C4927D4C723003BBD24 /* Heading8Label.swift in Sources */,
+				564C131927D51513007816D3 /* BigProjectListPresenter.swift in Sources */,
 				56045C4827D4C723003BBD24 /* Body4BoldLabel.swift in Sources */,
 				56045C4727D4C723003BBD24 /* Body6MediumLabel.swift in Sources */,
 				56045C5927D4C723003BBD24 /* Body1MediumLabel.swift in Sources */,
 				56045C5427D4C723003BBD24 /* Heading4Label.swift in Sources */,
+				56A4413127E1FA1B004D9413 /* SmallParameterView.swift in Sources */,
+				564C132227D51667007816D3 /* BigProjectCollectionViewCell.swift in Sources */,
 				56045C7927D4F9C1003BBD24 /* UIEdgeInsets.swift in Sources */,
 				56045C4527D4C723003BBD24 /* Body2MediumLabel.swift in Sources */,
 				56045C4327D4C723003BBD24 /* Body1Label.swift in Sources */,

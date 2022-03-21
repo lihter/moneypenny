@@ -2,6 +2,46 @@ import UIKit
 
 public extension UIColor {
 
+    static var paidBorderColor: UIColor {
+        .resolveColor(forLightMode: .moneyDiamondBlueLight, forDarkMode: .moneyDiamondBlueLight)
+    }
+
+    static var paidCellColors: UIColor {
+        .resolveColor(forLightMode: .moneyDiamondBlueLight, forDarkMode: .moneyDiamondBlueLight)
+    }
+
+    static var primaryText: UIColor {
+        .resolveColor(forLightMode: .moneyBlack, forDarkMode: .moneyWhite)
+    }
+
+    static var primaryBackground: UIColor {
+        .resolveColor(forLightMode: .moneyWhite, forDarkMode: .moneyDark)
+    }
+
+    static var discordPrimary: UIColor {
+        UIColor(hex: "#7289DA") ?? .blue
+    }
+
+    static var twitterPrimary: UIColor {
+        UIColor(hex: "#1DA1F2") ?? .blue
+    }
+
+    static var moneyDiamondBlueLight: UIColor {
+        UIColor(hex: "#00F0FF") ?? .blue
+    }
+
+    static var moneyDark: UIColor {
+        UIColor(hex: "#040404") ?? .black
+    }
+
+    static var moneyBlack: UIColor {
+        .black
+    }
+
+    static var moneyWhite: UIColor {
+        .white
+    }
+
     convenience init(rgb: Int) {
         self.init(
             red: (rgb >> 16) & 0xFF,
@@ -32,6 +72,22 @@ public extension UIColor {
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
 
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+
+    private static func resolveColor(
+        forLightMode lightModeColor: UIColor,
+        forDarkMode darkModeColor: UIColor
+    ) -> UIColor {
+        UIColor { (uiTraitCollection: UITraitCollection) -> UIColor in
+            switch uiTraitCollection.userInterfaceStyle {
+            case .dark:
+                return darkModeColor
+            case .unspecified, .light:
+                return lightModeColor
+            @unknown default:
+                return lightModeColor
+            }
+        }
     }
 
 }

@@ -3,21 +3,29 @@ import Resolver
 
 class HomeViewController: UIViewController {
 
-    var projectListViewController: ProjectListViewController!
-    var bigProjectListViewController: BigProjectListViewController!
+    var scrollView: UIScrollView!
+
+    var projectView: ProjectListView!
+
+    var bigProjectTitle: Heading6BoldLabel!
+    var bigProjectListView: BigProjectListView!
+    var projectListPresenter: ProjectListPresenter!
+    var bigProjectListPresenter: BigProjectListPresenter!
     var presenter: HomePresenter!
     var container: Resolver!
 
+    let defaultMargin: CGFloat = .gutter(baseValue: 30)
+
     init(
         presenter: HomePresenter,
-        projectListViewController: ProjectListViewController,
-        bigProjectListViewController: BigProjectListViewController
+        projectListPresenter: ProjectListPresenter,
+        bigProjectListPresenter: BigProjectListPresenter
     ) {
         super.init(nibName: nil, bundle: nil)
 
         self.presenter = presenter
-        self.projectListViewController = projectListViewController
-        self.bigProjectListViewController = bigProjectListViewController
+        self.projectListPresenter = projectListPresenter
+        self.bigProjectListPresenter = bigProjectListPresenter
     }
 
     required init?(coder: NSCoder) {
@@ -27,6 +35,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.isNavigationBarHidden = true
         buildViews()
     }
 

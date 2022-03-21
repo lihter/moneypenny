@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-extension BigProjectListViewController: ConstructViewsProtocol {
+extension BigProjectListView: ConstructViewsProtocol {
 
     func buildViews() {
         createViews()
@@ -10,25 +10,21 @@ extension BigProjectListViewController: ConstructViewsProtocol {
     }
 
     func createViews() {
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
+        collectionView = DynamicCollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
         collectionView.register(
             BigProjectCollectionViewCell.self,
             forCellWithReuseIdentifier: BigProjectCollectionViewCell.reuseIdentifier)
-        view.addSubview(collectionView)
+        addSubview(collectionView)
     }
 
     func styleViews() {
-        view.backgroundColor = .white
-
         collectionView.setContentOffset(CGPoint(x: 20, y: 0), animated: false)
         collectionView.showsVerticalScrollIndicator = false
     }
 
     func defineLayoutForViews() {
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(160)
+            $0.edges.equalToSuperview()
         }
     }
 

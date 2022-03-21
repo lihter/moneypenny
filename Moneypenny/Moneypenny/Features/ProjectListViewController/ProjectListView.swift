@@ -1,7 +1,7 @@
 import Combine
 import UIKit
 
-class ProjectListViewController: UIViewController {
+class ProjectListView: UIView {
 
     typealias DataSource = UICollectionViewDiffableDataSource<ProjectListSection, ProjectViewModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<ProjectListSection, ProjectViewModel>
@@ -10,24 +10,22 @@ class ProjectListViewController: UIViewController {
     var presenter: ProjectListPresenter!
     var dataSource: DataSource!
 
+    let defaultMargin: CGFloat = .gutter(baseValue: 30)
+
     private var disposables = Set<AnyCancellable>()
 
     init(presenter: ProjectListPresenter) {
-        super.init(nibName: nil, bundle: nil)
+        super.init(frame: .zero)
 
         self.presenter = presenter
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
         buildViews()
         makeDataSource()
         bindViews()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func bindViews() {

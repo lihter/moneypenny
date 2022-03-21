@@ -10,6 +10,7 @@ class SmallProjectCollectionViewCell: UICollectionViewCell {
 
     var watchlishButton: WatchlistButton!
     var projectTitleLabel: Body1BoldLabel!
+    var dateLabel: Body4MediumLabel!
     var gradientLayer: CAGradientLayer!
     var gradientView: UIView!
     var imageView: UIImageView!
@@ -36,6 +37,7 @@ class SmallProjectCollectionViewCell: UICollectionViewCell {
 
     func set(_ data: ProjectViewModel) {
         projectTitleLabel.text = data.title
+        dateLabel.text = "25 Mar"
         imageView.kf.setImage(with: data.imageUrl)
     }
 

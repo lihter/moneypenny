@@ -44,19 +44,11 @@ extension AppModule {
 
     private func registerViewControllers(in container: Resolver) {
         container
-            .register { ProjectListViewController(presenter: container.resolve()) }
-            .scope(.unique)
-
-        container
-            .register { BigProjectListViewController(presenter: container.resolve()) }
-            .scope(.unique)
-
-        container
             .register {
                 HomeViewController(
                     presenter: container.resolve(),
-                    projectListViewController: container.resolve(),
-                    bigProjectListViewController: container.resolve())
+                    projectListPresenter: container.resolve(),
+                    bigProjectListPresenter: container.resolve())
             }
             .scope(.unique)
     }

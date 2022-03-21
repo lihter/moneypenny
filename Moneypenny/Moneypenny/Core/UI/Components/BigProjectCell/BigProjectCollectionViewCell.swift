@@ -17,6 +17,8 @@ class BigProjectCollectionViewCell: UICollectionViewCell {
     var firstParameterView: SmallParameterView!
     var secondParameterView: SmallParameterView!
     var thirdParameterView: SmallParameterView!
+    var discordSocialCounter: SocialCounterView!
+    var twitterSocialCounter: SocialCounterView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,6 +47,9 @@ class BigProjectCollectionViewCell: UICollectionViewCell {
         firstParameterView.set(title: "Mint price", value: "100 N")
         secondParameterView.set(title: "Supply", value: "99999")
         thirdParameterView.set(title: "Mint date", value: "29 Mar")
+
+        discordSocialCounter.set(value: "1643", socialType: .discord)
+        twitterSocialCounter.set(value: "10292", socialType: .twitter)
     }
 
 }

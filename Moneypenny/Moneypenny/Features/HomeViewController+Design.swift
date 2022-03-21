@@ -1,4 +1,5 @@
 import SnapKit
+import UIKit
 
 extension HomeViewController: ConstructViewsProtocol {
 
@@ -9,31 +10,54 @@ extension HomeViewController: ConstructViewsProtocol {
     }
 
     func createViews() {
-        addChild(bigProjectListViewController)
-        view.addSubview(bigProjectListViewController.view)
+        scrollView = UIScrollView()
+        view.addSubview(scrollView)
 
-        addChild(projectListViewController)
-        view.addSubview(projectListViewController.view)
+        projectView = ProjectListView(presenter: projectListPresenter)
+        scrollView.addSubview(projectView)
+
+        bigProjectTitle = Heading6BoldLabel()
+        scrollView.addSubview(bigProjectTitle)
+
+        bigProjectListView = BigProjectListView(presenter: bigProjectListPresenter)
+        scrollView.addSubview(bigProjectListView)
     }
 
     func styleViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .primaryBackground
 
-        bigProjectListViewController.view.backgroundColor = .gray
-        projectListViewController.view.backgroundColor = .blue
+        bigProjectTitle.text = "Featured"
+        bigProjectTitle.textColor = .primaryText
+
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
     }
 
     func defineLayoutForViews() {
-        bigProjectListViewController.view.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(150)
+        scrollView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(defaultMargin)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
 
-        projectListViewController.view.snp.makeConstraints {
-            $0.top.equalTo(bigProjectListViewController.view.snp.bottom).offset(150)
+        bigProjectTitle.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(defaultMargin)
+        }
+
+        bigProjectListView.snp.makeConstraints {
+            $0.top.equalTo(bigProjectTitle.snp.bottom).offset(defaultMargin)
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview()
+
+            $0.width.equalToSuperview()
+        }
+
+        projectView.snp.makeConstraints {
+            $0.top.equalTo(bigProjectListView.snp.bottom).offset(CGFloat.gutter(baseValue: 70))
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(defaultMargin)
+
+            $0.width.equalToSuperview()
+            $0.height.equalTo(150)
         }
     }
 

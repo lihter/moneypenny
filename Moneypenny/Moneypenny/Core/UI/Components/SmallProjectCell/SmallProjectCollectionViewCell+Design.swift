@@ -22,6 +22,9 @@ extension SmallProjectCollectionViewCell: ConstructViewsProtocol {
         projectTitleLabel = Body1BoldLabel()
         contentView.addSubview(projectTitleLabel)
 
+        dateLabel = Body4MediumLabel()
+        contentView.addSubview(dateLabel)
+
         watchlishButton = WatchlistButton()
         contentView.addSubview(watchlishButton)
     }
@@ -39,12 +42,14 @@ extension SmallProjectCollectionViewCell: ConstructViewsProtocol {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
 
-//        imageView.kf.setImage(with: url) // set placeholder
+        imageView.image = UIImage(with: .projectLogoPlaceholder)
 
-        projectTitleLabel.textColor = .white
+        projectTitleLabel.textColor = .moneyWhite
         projectTitleLabel.numberOfLines = 0
         projectTitleLabel.adjustsFontSizeToFitWidth = true
         projectTitleLabel.lineBreakMode = .byWordWrapping
+
+        dateLabel.textColor = .moneyWhite
     }
 
     func defineLayoutForViews() {
@@ -61,6 +66,11 @@ extension SmallProjectCollectionViewCell: ConstructViewsProtocol {
         }
 
         projectTitleLabel.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(CGFloat.gutter(baseValue: 15))
+        }
+
+        dateLabel.snp.makeConstraints {
+            $0.top.equalTo(projectTitleLabel.snp.bottom).offset(CGFloat.gutter(baseValue: 5))
             $0.leading.trailing.equalToSuperview().inset(CGFloat.gutter(baseValue: 15))
             $0.bottom.equalToSuperview().inset(defaultMargin)
         }

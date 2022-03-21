@@ -33,13 +33,19 @@ extension BigProjectCollectionViewCell: ConstructViewsProtocol {
 
         thirdParameterView = SmallParameterView()
         cellBackgroundView.addSubview(thirdParameterView)
+
+        discordSocialCounter = SocialCounterView()
+        cellBackgroundView.addSubview(discordSocialCounter)
+
+        twitterSocialCounter = SocialCounterView()
+        cellBackgroundView.addSubview(twitterSocialCounter)
     }
 
     func styleViews() {
         contentView.backgroundColor = .clear
         contentView.layer.masksToBounds = true
 
-        cellBackgroundView.backgroundColor = .white
+        cellBackgroundView.backgroundColor = .primaryBackground
         cellBackgroundView.layer.cornerRadius = cornerRadius
         cellBackgroundView.layer.masksToBounds = true
         cellBackgroundView.layer.shadowOffset = CGSize(width: 0, height: 4)
@@ -47,24 +53,24 @@ extension BigProjectCollectionViewCell: ConstructViewsProtocol {
         cellBackgroundView.layer.shadowRadius = 16
         cellBackgroundView.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
         cellBackgroundView.layer.shadowColor = UIColor.black.cgColor
-        cellBackgroundView.layer.borderColor = UIColor(hex: "#00F0FF")?.cgColor ?? UIColor.black.cgColor
+        cellBackgroundView.layer.borderColor = UIColor.paidBorderColor.cgColor
         cellBackgroundView.layer.borderWidth = 3
 
         gradientView.alpha = 1/4
         gradientLayer.type = .axial
         gradientLayer.colors = [
-            UIColor(hex: "#00F0FF")?.cgColor ?? UIColor.clear.cgColor,
-            UIColor(hex: "#00F0FF")?.withAlphaComponent(0.5).cgColor ?? UIColor.clear.cgColor,
-            UIColor(hex: "#00F0FF")?.cgColor ?? UIColor.clear.cgColor
-          ]
+            UIColor.paidCellColors.cgColor,
+            UIColor.paidCellColors.withAlphaComponent(0.5).cgColor,
+            UIColor.paidCellColors.cgColor
+        ]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0, y: 1)
 
         imageView.layer.cornerRadius = cornerRadius
         imageView.layer.masksToBounds = true
-//        imageView.kf.setImage(with: url) // set placeholder
+        imageView.image = UIImage(with: .projectLogoPlaceholder)
 
-        projectTitleLabel.textColor = .black
+        projectTitleLabel.textColor = .primaryText
         projectTitleLabel.numberOfLines = 0
         projectTitleLabel.adjustsFontSizeToFitWidth = true
         projectTitleLabel.lineBreakMode = .byWordWrapping
@@ -93,7 +99,6 @@ extension BigProjectCollectionViewCell: ConstructViewsProtocol {
         projectTitleLabel.snp.makeConstraints {
             $0.top.equalTo(cellBackgroundView.snp.top).offset(CGFloat.gutter(baseValue: 15))
             $0.leading.equalTo(imageView.snp.trailing).offset(CGFloat.gutter(baseValue: 15))
-            $0.trailing.equalToSuperview().inset(CGFloat.gutter(baseValue: 15))
         }
 
         firstParameterView.snp.makeConstraints {
@@ -112,6 +117,16 @@ extension BigProjectCollectionViewCell: ConstructViewsProtocol {
             $0.top.equalTo(imageView.snp.bottom).offset(defaultMargin)
             $0.leading.equalTo(secondParameterView.snp.trailing).offset(CGFloat.gutter(baseValue: 15))
             $0.bottom.equalToSuperview().inset(defaultMargin)
+        }
+
+        twitterSocialCounter.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.leading.equalTo(projectTitleLabel.snp.trailing).offset(CGFloat.gutter(baseValue: 10))
+        }
+
+        discordSocialCounter.snp.makeConstraints {
+            $0.top.trailing.bottom.equalToSuperview()
+            $0.leading.equalTo(twitterSocialCounter.snp.trailing)
         }
     }
 

@@ -17,8 +17,8 @@ extension SmallParameterView: ConstructViewsProtocol {
     }
 
     func styleViews() {
-        titleLabel.textColor = .black.withAlphaComponent(0.5)
-        valueLabel.textColor = .black
+        titleLabel.textColor = .primaryText.withAlphaComponent(0.5)
+        valueLabel.textColor = .primaryText
     }
 
     func defineLayoutForViews() {

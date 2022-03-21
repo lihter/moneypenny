@@ -1,33 +1,29 @@
 import Combine
 import UIKit
 
-class BigProjectListViewController: UIViewController {
+class BigProjectListView: UIView {
 
     typealias DataSource = UICollectionViewDiffableDataSource<BigProjectListSection, ProjectViewModel>
     typealias Snapshot = NSDiffableDataSourceSnapshot<BigProjectListSection, ProjectViewModel>
 
-    var collectionView: UICollectionView!
+    var collectionView: DynamicCollectionView!
     var presenter: BigProjectListPresenter!
     var dataSource: DataSource!
 
     private var disposables = Set<AnyCancellable>()
 
     init(presenter: BigProjectListPresenter) {
-        super.init(nibName: nil, bundle: nil)
+        super.init(frame: .zero)
 
         self.presenter = presenter
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
         buildViews()
         makeDataSource()
         bindViews()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func bindViews() {

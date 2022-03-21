@@ -1,34 +1,29 @@
 import Combine
 import UIKit
 
-class HomeViewController: UIViewController {
+class BigProjectListView: UIView {
 
-    typealias DataSource = UICollectionViewDiffableDataSource<HomeSection, ProjectViewModel>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<HomeSection, ProjectViewModel>
+    typealias DataSource = UICollectionViewDiffableDataSource<BigProjectListSection, ProjectViewModel>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<BigProjectListSection, ProjectViewModel>
 
-    var testLabel: Heading6BoldLabel!
-    var collectionView: UICollectionView!
-    var presenter: HomePresenter!
+    var collectionView: DynamicCollectionView!
+    var presenter: BigProjectListPresenter!
     var dataSource: DataSource!
 
     private var disposables = Set<AnyCancellable>()
 
-    init(presenter: HomePresenter) {
-        super.init(nibName: nil, bundle: nil)
+    init(presenter: BigProjectListPresenter) {
+        super.init(frame: .zero)
 
         self.presenter = presenter
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
         buildViews()
         makeDataSource()
         bindViews()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func bindViews() {
@@ -46,8 +41,8 @@ class HomeViewController: UIViewController {
             cellProvider: { (collectionView, indexPath, data) -> UICollectionViewCell? in
                 guard
                     let cell = collectionView.dequeueReusableCell(
-                        withReuseIdentifier: SmallProjectCollectionViewCell.reuseIdentifier,
-                        for: indexPath) as? SmallProjectCollectionViewCell
+                        withReuseIdentifier: BigProjectCollectionViewCell.reuseIdentifier,
+                        for: indexPath) as? BigProjectCollectionViewCell
                 else {
                     return UICollectionViewCell()
                 }

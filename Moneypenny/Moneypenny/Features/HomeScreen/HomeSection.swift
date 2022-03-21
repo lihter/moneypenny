@@ -1,5 +1,0 @@
-enum HomeSection {
-
-    case main
-
-}

@@ -18,7 +18,8 @@ extension AppModule {
 
     func registerAllServices(in container: Resolver) {
         registerRouter(in: container)
-        registerFirstScreen(in: container)
+        registerPresenters(in: container)
+        registerViewControllers(in: container)
     }
 
     private func registerRouter(in container: Resolver) {
@@ -27,13 +28,28 @@ extension AppModule {
             .scope(.application)
     }
 
-    private func registerFirstScreen(in container: Resolver) {
+    private func registerPresenters(in container: Resolver) {
         container
-            .register { HomePresenter(router: container.resolve()) }
+            .register { ProjectListPresenter(router: container.resolve()) }
             .scope(.unique)
 
         container
-            .register { HomeViewController(presenter: container.resolve()) }
+            .register { BigProjectListPresenter(router: container.resolve()) }
+            .scope(.unique)
+
+        container
+            .register { HomePresenter(router: container.resolve()) }
+            .scope(.unique)
+    }
+
+    private func registerViewControllers(in container: Resolver) {
+        container
+            .register {
+                HomeViewController(
+                    presenter: container.resolve(),
+                    projectListPresenter: container.resolve(),
+                    bigProjectListPresenter: container.resolve())
+            }
             .scope(.unique)
     }
 
